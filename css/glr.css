@@ -1,0 +1,74 @@
+    .flm-pt1, .flm-pt2, .flm-pt3, .flm-pt4, .flm-pt5, .flm-pt6, .flm-pt7, 
+    .flm-pt8, .flm-pt9, .flm-pt10, .flm-pt11, .flm-pt12 {
+        float: left;
+        width: 182px;
+        height: 240px;
+        padding: 5px;
+        text-align: center;
+        border-radius: 4px;
+        box-shadow: rgba(0,0,0,1.2) 0px 1px 3px;
+    }
+
+    .flm-pt1 {
+        margin: 10px 3px 3px -16px;
+    }
+
+    .flm-pt2 {
+        margin: 10px 3px 3px 5px;
+    }
+
+    .flm-pt3 {
+        margin: 10px 3px 3px 5px;
+        margin-right: 12px;
+    }
+
+    .flm-pt4, .flm-pt5, .flm-pt6, .flm-pt7, .flm-pt8, .flm-pt9, .flm-pt10, .flm-pt11, .flm-pt12 {
+        margin: 3px 3px 3px 5px;
+        position: relative;
+        left: 100%;
+    }
+
+    .flm-pt4 {
+        margin-left: -1883px;
+        margin-top: 268px;
+    }
+
+    .flm-pt5 {
+        margin-left: -1683px;
+        margin-top: 268px;
+    }
+
+    .flm-pt6 {
+        margin-left: -1483px;
+        margin-top: 268px;
+    }
+
+    .flm-pt7 {
+        margin-left: -1883px;
+        margin-top: 526px;
+    }
+
+    .flm-pt8 {
+        margin-left: -1683px;
+        margin-top: 526px;
+    }
+
+    .flm-pt9 {
+        margin-left: -1483px;
+        margin-top: 526px;
+    }
+
+    .flm-pt10 {
+        margin-left: -1883px;
+        margin-top: 784px;
+    }
+
+    .flm-pt11 {
+        margin-left: -1683px;
+        margin-top: 784px;
+    }
+
+    .flm-pt12 {
+        margin-left: -1483px;
+        margin-top: 784px;
+    }

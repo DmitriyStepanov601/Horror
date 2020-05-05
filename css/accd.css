@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+    .accd {                                               /* базовый контейнер аккордеона */
+        width: 100%;
+        max-width: 600px;      
+        min-height: 0;
+        display: block;
+        position: absolute;   
+        padding: 0;
+        background-color: #fefffa;
+        overflow: hidden;
+        margin-left: 640px;
+        margin-top: 145px; 
+    }
+
+    .accd h3 {
+        text-align: center;
+    }
+
+    .accd h2 {                                                           /* заголовки панелей аккордеона */
+        font-size: 16px;
+        font-weight: 300;
+        letter-spacing: 1px;
+        display: block;
+        margin: 0;
+        padding: 10px 25px;
+        cursor: pointer;
+        color: #f4f4f4;
+        background: #75346c;
+        border-bottom: 1px solid #75346c;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .inf_film {                                                            /* блоки с содержанием */
+        position: relative;
+        overflow: hidden;
+        max-height: 800px;
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+    .inf_film img { 
+        padding: 15px 15px 0 15px;
+    }
+
+    .inf_film p {                                                            /* параграфы */
+        color: rgba(0, 0, 0);       
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 1px;
+        padding: 0 20px
+        font-family: 'Fira Sans', sans-serif;
+    }
+
+    .accd ul {    
+        list-style: none;
+        perspective: 900;
+        padding: 0;
+        margin: 0;
+    }
+
+    .accd ul li {                        /* отдельный элемент списка со скрытым флажком, заголовоком панелей и блоком с содержанием */
+        position: relative;
+        padding: 0;
+        margin: 0;
+    }
+
+    .accd ul li:nth-of-type(1) {          /* время ожидания перед воспроизведением анимации на основе нумерации в дереве элементов  */
+        animation-delay: 0.5s;
+    }
+    .accd ul li:nth-of-type(2) {
+        animation-delay: 0.75s;
+    }
+    .accd ul li:nth-of-type(3) {
+        animation-delay: 1s;
+    }
+    .accd ul li:last-of-type {
+        padding-bottom: 0;
+    }
+
+    .accd ul li i {                                        /* указатель переключения состояния аккордеона */
+        position: absolute;
+        transform: translate(-6px, 0);
+        margin-top: 16px;
+        right: 15px;
+    }
+
+
+    .accd ul li i:before, .accd ul li i:after {                               /* указатель */
+        content: "";
+        position: absolute;
+        background-color: #eee;
+        width: 3px;
+        height: 9px;
+    }
+
+    .accd ul li i:before {                                          /* элемент трансформации указателя при переключении */
+        transform: translate(-2px, 0) rotate(45deg);
+    }
+
+    .accd ul li i:after {
+        transform: translate(2px, 0) rotate(-45deg);
+    }
+
+
+    .accd ul li input[type=checkbox] {                                         /* скрытие чекбокса */
+        position: absolute;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        opacity: 0;
+    }
+
+    .accd ul li input[type=checkbox]:checked ~ div.inf_film {                /* скрытие блока с содержанием у флажка которого установлен checked */
+        margin-top: 0;
+        max-height: 0;
+        opacity: 0;
+        transform: translate(0, 50%);
+    }
+
+
+    .accd ul li input[type=checkbox]:checked ~ i:before {                              /* показ указателя вниз */
+        transform: translate(2px, 0) rotate(45deg);
+    }
+
+    .accd ul li input[type=checkbox]:checked ~ i:after {
+        transform: translate(-2px, 0) rotate(-45deg);
+    }
+
+    div.inf_film, ul li i:before, ul li i:after {                                  /*  эффект перехода между двумя состояниями указателя */
+        transition: all 0.5s ease-in-out;
+    }

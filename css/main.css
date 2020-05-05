@@ -1,0 +1,37 @@
+﻿    body {
+        font-family: 'Open Sans', sans-serif;
+        background: url(../img/blk.jpg) center bottom; 
+    }
+
+    header {                                                           /****** шапка сайта ******/
+        display: flex;                                                 
+        height: 230px;      
+        width: 1333px;      
+    }
+
+    .movie_desc {
+        float: right;
+        font-size: 16px;
+        margin-top: 10px;
+        width: 650px; 
+        text-align: left;  
+    }
+
+   footer {                                                          /****** подвал сайта ******/
+        display: flex;                                                    
+        height: 230px;                                                           
+        width: 1333px;
+    }
+
+    @media (max-width: 768px) {
+        header img {
+            width: 40%;
+            height: 40%;
+        }
+
+        footer img {
+            width: 40%;
+            height: 40%;
+        }
+
+    }
